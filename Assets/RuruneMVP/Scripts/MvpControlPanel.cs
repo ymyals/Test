@@ -24,8 +24,15 @@ namespace RuruneMVP
             GUILayout.BeginArea(PanelRect, GUI.skin.box);
             scroll = GUILayout.BeginScrollView(scroll);
             GUILayout.Label("Character MVP");
-            GUILayout.Label("Right drag: orbit / Wheel: zoom");
-            if (orbitCamera != null && GUILayout.Button("Reset camera")) orbitCamera.ResetView();
+            GUILayout.Label("Right drag: orbit / Wheel: zoom / Middle drag: pan");
+            if (orbitCamera != null)
+            {
+                if (GUILayout.Button("Reset camera")) orbitCamera.ResetView();
+                if (GUILayout.Button("Fit character") && !orbitCamera.FitCharacter())
+                    Debug.LogWarning("No active character mesh found. Run Quick Setup first.", this);
+                GUILayout.Label("View height (lower value moves character up)");
+                orbitCamera.ViewHeight = GUILayout.HorizontalSlider(orbitCamera.ViewHeight, -1f, 1f);
+            }
             GUILayout.Space(10f);
             GUILayout.Label("Motions");
             if (motionController != null)

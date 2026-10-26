@@ -1,5 +1,7 @@
 # Unity Editor での手動設定
 
+まとめて進める場合は [一括設定手順](BatchSetup.md) を参照してください。以下は個別設定の詳細です。
+
 ## 1. 最初に対応バージョンを確認する
 
 提供資料：商品ページ https://booth.pm/ja/items/5957830 を印刷した `IKUSIA_JA.pdf`。
