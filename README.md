@@ -5,6 +5,12 @@ Unity / C# による Windows 向け 3D キャラクターアプリの第1段階�
 既存の Unity プロジェクトに導入するソース一式です。`ProjectSettings` と
 `Packages/manifest.json` は含めていないため、このリポジトリ自体を Unity Hub で開く構成ではありません。
 
+## Windowsで起動する次の手順
+
+[Windowsビルド・起動のまとめ手順](Docs/WindowsBuild.md)。
+`Tools > Rurune MVP > Build Windows App` で設定済みのローカルシーンをWindows x86_64向けにビルドします。
+ビルド機能自体はUnity上で未検証です。ユーザーが確認した `idle` の姿勢異常は未解決として保留しています。
+
 ## 今回のまとめ設定
 
 [まとめて更新・設定・確認する手順](Docs/BatchSetup.md) を使ってください。
