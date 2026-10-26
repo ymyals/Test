@@ -1,0 +1,21 @@
+# Unity generated state
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Bb]uild/
+/[Bb]uilds/
+.vs/
+*.csproj
+*.sln
+# Purchased assets: import ONLY under this directory.
+/Assets/LocalOnly/
+/Assets/LocalOnly.meta
+# Never commit avatar/package archives.
+*.unitypackage
+*.fbx
+*.FBX
+*.blend
+*.vrm
+*.zip
