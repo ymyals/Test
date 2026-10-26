@@ -99,3 +99,12 @@ Quick Setupの **Write local diagnostic report** で構成のテキストも作�
 `Assets/LocalOnly/Diagnostics/` に保存され、自動送信されません。
 診断レポートはモデル名・Renderer名等を含むため、共有前に内容を確認してください。
 資格情報、ユーザー名、絶対パスは記録せず、Console内容も収集しません。
+
+## ボタンが表示されるのにAnimatorの警告が出る場合
+
+停止中にHierarchyのMVP Systemsを選び、Character Motion ControllerのAnimatorへ
+Hierarchyのモデル本体（Animator付き）をドラッグし、ControllerがAppMotionsであることを確認します。
+Character Rootには同じモデルのTransformを指定し、保存後に再生して試します。
+最新版では未割り当て・無効化・Controllerなしを区別して表示します。
+Quick Setupの手順BまたはDを再実行した場合はCharacter Rootも自動登録されます。
+無効な参照を復旧する際は指定ルート配下の一意な候補だけを使い、コンポーネントを強制有効化しません。

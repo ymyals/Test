@@ -193,6 +193,7 @@ namespace RuruneMVP.Editor
             orbit.ConfigureFraming(character.transform, bounds);
             animator.applyRootMotion = false;
             SetReference(motion, "animator", animator);
+            SetReference(motion, "characterRoot", character.transform);
             SetReference(panel, "orbitCamera", orbit);
             SetReference(panel, "motionController", motion);
             SetReference(panel, "expressionController", expression);
@@ -267,6 +268,7 @@ namespace RuruneMVP.Editor
             animator.runtimeAnimatorController = controller;
             animator.applyRootMotion = false;
             SetReference(motion, "animator", animator);
+            SetReference(motion, "characterRoot", character.transform);
             EditorUtility.SetDirty(controller);
             AssetDatabase.SaveAssets();
             SaveMotions(entries);
@@ -289,6 +291,7 @@ namespace RuruneMVP.Editor
             if (entries.Count == 0) throw new InvalidOperationException("No non-synced motion states were found.");
             SaveLocalCopy();
             SetReference(motion, "animator", animator);
+            SetReference(motion, "characterRoot", character.transform);
             SaveMotions(entries);
             message = "Actual state paths registered. Existing transitions can override a button request; FX states may not animate the body.";
         }
